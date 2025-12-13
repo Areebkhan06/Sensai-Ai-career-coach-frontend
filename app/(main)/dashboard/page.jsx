@@ -57,7 +57,6 @@ const IndustryInsightsPage = () => {
     checkIndustry();
   }, [user?.id, isLoaded, isSignedIn, router]);
 
-  console.log(userInfo);
 
   return (
     <div className="container mx-auto">

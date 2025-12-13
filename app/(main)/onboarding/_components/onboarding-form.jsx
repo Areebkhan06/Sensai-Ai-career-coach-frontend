@@ -67,7 +67,6 @@ const OnboardingForm = ({ industries }) => {
   const handleSubmit = async (e) => {
     setisloading(true);
     e.preventDefault();
-    console.log("Submitted Data:", formData);
 
     const validationErrors = validates();
 

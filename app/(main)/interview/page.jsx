@@ -14,7 +14,6 @@ const InterviewPage = () => {
   const { user, isSignedIn, isLoaded } = useUser();
   const [Assiments, setAssiments] = useState(null);
 
-  console.log(Assiments);
 
   const getAllAssiments = async () => {
     try {
