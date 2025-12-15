@@ -120,40 +120,43 @@ export default function Home() {
             What Our Users Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
-            {testimonial.map((testimonial, index) => (
-              <Card key={index} className={"bg-background"}>
-                <CardContent className={"pt-6"}>
+            {testimonial.map((item, index) => (
+              <Card key={index} className="bg-background">
+                <CardContent className="pt-6">
                   <div className="flex flex-col space-y-4">
+                    {/* Profile Info */}
                     <div className="flex items-center space-x-4">
                       <div className="h-12 w-12 shrink-0 relative">
                         <Image
-                          width={40}
-                          height={40}
-                          src={testimonial.image}
-                          alt={testimonial.author}
+                          src={item.image}
+                          alt={item.author}
+                          fill
                           className="rounded-full border-2 border-primary/20 object-cover"
                         />
                       </div>
+
                       <div>
-                        <p className="font-semibold">{testimonial.author}</p>
+                        <p className="font-semibold">{item.author}</p>
                         <p className="text-sm text-muted-foreground">
-                          {testimonial.role}
+                          {item.role}
                         </p>
-                        <p className="text-sm text-primary">
-                          {testimonial.company}
-                        </p>
+                        <p className="text-sm text-primary">{item.company}</p>
                       </div>
                     </div>
-                    <blockquote>
-                      <p className="text-muted-foreground relative italic">
-                        <span className="text-3xl text-primary absolute -top-4 -left-2">
-                          &quot;
-                        </span>
-                        {testimonial.quote}
-                        <span className="text-3xl text-primary absolute -bottm-4">
-                          &quot;
-                        </span>
+
+                    {/* Quote */}
+                    <blockquote className="relative">
+                      <span className="text-3xl text-primary absolute -top-4 -left-2">
+                        &quot;
+                      </span>
+
+                      <p className="text-muted-foreground italic">
+                        {item.quote}
                       </p>
+
+                      <span className="text-3xl text-primary absolute -bottom-4 right-0">
+                        &quot;
+                      </span>
                     </blockquote>
                   </div>
                 </CardContent>

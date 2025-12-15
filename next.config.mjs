@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    turbo: false,   // ⬅️ THIS DISABLES TURBOPACK (important)
+    turbo: false,
   },
 
   images: {
@@ -9,6 +9,18 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "randomuser.me",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "source.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "plus.unsplash.com", // ⬅️ REQUIRED FOR YOUR ERROR
       },
     ],
   },
